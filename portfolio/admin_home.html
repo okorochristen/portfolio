@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+      <head>
+        <title>okorochristen_Adim Home</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/home.css" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="">
+        <meta content="">
+        <link rel="shortcut icon" href="img/icon.jpg">
+      </head>
+
+      <body>
+        <header class="mainheader">
+        <nav>
+          <ul>
+    			<li class="nav-brand"><b><a href="#"><b>OkoroChristen</b></a></li>
+    			</ul>
+    	</nav>
+    </header>
+
+       <div id="table1">
+           {{msg}}
+           <table border="1" cellpadding="5">
+               <caption>Mesages</caption>
+               <tr>
+                   <th>S/N</th>
+                  <th>Firstname</th>
+                  <th>Address</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                  <th>Time</th>
+              </tr>
+              {% for data in rows %}
+                <tr>
+                    <td>{{ data['id'] }}</td>
+                    <td>{{ data['firstname'] }}</td>
+                    <td>{{ data['address'] }}</td>
+                    <td>{{ data['subject'] }}</td>
+                    <td>{{ data['message'] }}</td>
+                    <td>{{ data['now'] }}
+                </tr>
+                {% endfor %}
+            </table>
+       </div>
+   </body>
+
+ </html>
